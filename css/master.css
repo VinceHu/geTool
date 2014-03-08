@@ -1,0 +1,6 @@
+/**/
+.t-site{width: 1020px; height: 700px;border-top:10px #3c74b9 solid;margin:0 auto;position: relative;}
+.t-header{position: absolute;}
+.t-header h1{background: url(../img/ge_logo.png) no-repeat;text-indent: -999em;width: 271px; height: 62px;}
+.t-page{width: 1020px;height:100%;background-color: #f90}
+.main-page{background: url(../img/main_img.jpg) no-repeat;}

@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>地图</title>
+    <script src="js/jquery-1.8.2.min.js"></script>
+    <script src="js/raphael.js"></script>
+    <style type="text/css">
+        #tiplayer {padding:5px; z-index: 1000; min-height: 1em; background: #000;font: 12px 'Microsoft YaHei',Arial;color: #fff;position: absolute;word-wrap: break-word;
+            -moz-border-radius: 3px;
+            -khtml-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+        }
+        #map{cursor: pointer; margin-right: auto; margin-left: auto; width: 650px;}
+    </style>
+    <script>
+        $(function(){
+
+            // 在坐标（10,50）创建宽320，高200的画布
+            var paper = Raphael(20, 20, 500, 500);
+ 
+            // 在坐标（x = 50, y = 40）绘制半径为 10 的圆
+            var circle = paper.circle(200, 200, 160);
+             
+            // 给绘制的圆圈填充红色 (#f00)
+            circle.attr("fill", "#f90");
+             
+            // 设置画笔（stroke）的颜色为白色
+            circle.attr("stroke", "#000");
+
+
+            var anim = Raphael.animation({
+                //cx: 0, 
+                //cy: 0,
+                fill:"red",
+                "stroke-width": 200,
+                "stroke-opacity":0.5
+            },5000, "elastic");
+            circle.animate(anim); // run the given animation immediately
+            //circle2.animate(anim.delay(500)); // run the given animation after 500 ms
+
+
+        })
+    </script>
+</head>
+<body>
+</body>
+</html>
